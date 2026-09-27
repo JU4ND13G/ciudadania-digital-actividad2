@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apropiación Digital — Juan Diego Castro Gómez</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --ink:#0f1419; --surface:#1a222b; --surface-2:#212b35;
+    --paper:#eef1f3; --muted:#8fa0ac; --line:#2c3844;
+    --signal:#ffb640; --data:#5cc8ff;
+    --serif:'Fraunces',serif; --sans:'IBM Plex Sans',sans-serif; --mono:'IBM Plex Mono',monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; scroll-padding-top:70px;}
+  body{background:var(--ink); color:var(--paper); font-family:var(--sans); line-height:1.6;}
+  a{color:var(--data); text-decoration:none;}
+  img{max-width:100%; display:block; filter:grayscale(15%) contrast(1.02);}
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+
+  /* NAV */
+  nav{position:sticky; top:0; z-index:50; background:rgba(15,20,25,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+  .nav-inner{max-width:960px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;}
+  .nav-brand{font-family:var(--mono); font-size:13px; color:var(--signal); letter-spacing:.02em;}
+  .nav-links{display:flex; gap:22px; flex-wrap:wrap;}
+  .nav-links a{color:var(--muted); font-size:14px; font-weight:500; transition:color .15s;}
+  .nav-links a:hover{color:var(--paper);}
+
+  /* HERO */
+  header.hero{padding:110px 0 80px; border-bottom:1px solid var(--line);}
+  .folio{font-family:var(--mono); color:var(--signal); font-size:13px; margin-bottom:22px;}
+  .id-card{display:inline-flex; align-items:center; gap:10px; background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:8px 14px; font-family:var(--mono); font-size:13px; color:var(--data); margin-bottom:28px;}
+  h1{font-family:var(--serif); font-weight:600; font-size:clamp(2.2rem,5vw,3.6rem); line-height:1.08; max-width:11ch; margin-bottom:24px;}
+  .hero p.lede{max-width:56ch; color:var(--muted); font-size:1.08rem;}
+
+  /* SECTIONS */
+  section{padding:76px 0; border-bottom:1px solid var(--line);}
+  .sec-head{display:flex; align-items:baseline; gap:16px; margin-bottom:36px;}
+  .sec-num{font-family:var(--mono); color:var(--signal); font-size:14px;}
+  h2{font-family:var(--serif); font-weight:600; font-size:clamp(1.6rem,3vw,2.2rem);}
+  .sec-intro{color:var(--muted); max-width:62ch; margin-bottom:36px;}
+
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px;}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:26px; display:flex; flex-direction:column; gap:12px;}
+  .card i{color:var(--data); font-size:20px;}
+  .card h3{font-family:var(--sans); font-weight:600; font-size:1.02rem;}
+  .card p{color:var(--muted); font-size:.94rem;}
+
+  .media{border-radius:8px; overflow:hidden; border:1px solid var(--line); margin-bottom:32px;}
+  .media img{width:100%; height:220px; object-fit:cover;}
+
+  .risk{border-left:3px solid var(--signal); background:var(--surface); padding:18px 20px; border-radius:0 6px 6px 0;}
+  .risk h4{font-family:var(--mono); font-size:13px; color:var(--signal); margin-bottom:6px; text-transform:lowercase;}
+  .risk p{color:var(--muted); font-size:.94rem;}
+
+  .two-col{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:start;}
+  @media(max-width:760px){.two-col{grid-template-columns:1fr;}}
+
+  /* REFLECTION */
+  #reflexion{background:var(--surface-2);}
+  .quote-block{background:var(--surface); border:1px solid var(--line); border-radius:8px; padding:32px; position:relative;}
+  .quote-block p{color:var(--paper); font-size:1.02rem; margin-bottom:16px;}
+  .quote-block p:last-child{margin-bottom:0;}
+  .signature{margin-top:28px; padding-top:20px; border-top:1px dashed var(--line); font-family:var(--mono); font-size:13px; color:var(--muted);}
+
+  footer{padding:36px 0; text-align:center; color:var(--muted); font-family:var(--mono); font-size:12px;}
+
+  ::selection{background:var(--signal); color:var(--ink);}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-brand">CIUDADANÍA DIGITAL · MÓDULO 2</div>
+    <div class="nav-links">
+      <a href="#inicio">Inicio</a>
+      <a href="#informacion">Información</a>
+      <a href="#economia">Economía</a>
+      <a href="#derechos">Derechos</a>
+      <a href="#reflexion">Reflexión</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div class="folio">APROPIACIÓN DIGITAL — DOSSIER DE ACTIVIDAD</div>
+    <div class="id-card"><i class="fa-solid fa-id-badge"></i> Juan Diego Castro Gómez — 127161</div>
+    <h1>Cómo habitamos el mundo digital con criterio</h1>
+    <p class="lede">Esta actividad da continuidad al Módulo 1 sobre ciudadanía digital y organiza tres apropiaciones clave de la vida en red: cómo nos informamos y comunicamos, cómo participamos en la economía digital, y qué derechos y deberes sostienen nuestra seguridad en línea.</p>
+  </div>
+</header>
+
+<section id="informacion">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>Información digital</h2></div>
+    <p class="sec-intro">La alfabetización digital es la capacidad de buscar, evaluar y comunicar información de forma crítica. En un entorno saturado de contenido, saber leer una fuente es tan importante como saber escribir un mensaje.</p>
+
+    <div class="media">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=60" alt="Personas usando dispositivos digitales para comunicarse">
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <h3>Alfabetismo digital</h3>
+        <p>Habilidad para localizar, verificar y usar información de forma crítica, distinguiendo fuentes confiables de la desinformación.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-comments"></i>
+        <h3>Comunicación en red</h3>
+        <p>Los medios digitales permiten intercambios instantáneos y globales, pero exigen claridad, contexto y responsabilidad en cada mensaje.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-handshake-simple"></i>
+        <h3>Netiqueta</h3>
+        <p>Conjunto de normas de cortesía que rigen la interacción en línea: respeto al escribir, cuidado del tono y reconocimiento de la diversidad de audiencias.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="economia">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>Procesos económicos digitales</h2></div>
+    <p class="sec-intro">Las TIC transformaron la manera en que producimos, compramos y trabajamos, dando lugar a nuevos modelos de intercambio que dependen de la confianza entre usuarios.</p>
+
+    <div class="two-col">
+      <div class="cards" style="grid-template-columns:1fr;">
+        <div class="card">
+          <i class="fa-solid fa-people-arrows"></i>
+          <h3>Economía colaborativa</h3>
+          <p>Plataformas que conectan directamente a oferentes y usuarios (transporte, hospedaje, servicios) optimizando recursos ya existentes en lugar de crear nuevos.</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>Comercio electrónico</h3>
+          <p>Compra y venta de bienes y servicios a través de internet, con banca en línea y medios de pago digitales que agilizan las transacciones.</p>
+        </div>
+      </div>
+      <div class="media" style="margin-bottom:0;">
+        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=60" alt="Comercio electrónico y pagos digitales">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="derechos">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>Derechos digitales y seguridad en línea</h2></div>
+    <p class="sec-intro">Ejercer ciudadanía digital implica conocer los riesgos del entorno en línea y actuar con los deberes que protegen tanto los datos propios como los de terceros.</p>
+
+    <div class="cards" style="margin-bottom:36px;">
+      <div class="risk"><h4>adicción</h4><p>Uso excesivo y compulsivo de dispositivos que afecta el bienestar y las rutinas diarias.</p></div>
+      <div class="risk"><h4>ciberacoso</h4><p>Hostigamiento, humillación o amenazas reiteradas hacia una persona a través de medios digitales.</p></div>
+      <div class="risk"><h4>grooming</h4><p>Manipulación emocional de un adulto hacia un menor en línea con fines de abuso.</p></div>
+      <div class="risk"><h4>sexting sin consentimiento</h4><p>Difusión de contenido íntimo sin la autorización de quien lo envió originalmente.</p></div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h3>Protección de datos</h3>
+        <p>Derecho a controlar qué información personal se comparte y con quién, y a exigir un manejo responsable por parte de plataformas y terceros.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-scale-balanced"></i>
+        <h3>Deberes ciudadanos</h3>
+        <p>Verificar antes de reenviar, respetar a otros usuarios y reportar contenido inapropiado son prácticas mínimas de responsabilidad digital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="reflexion">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Reflexión personal</h2></div>
+    <p class="sec-intro">Espacio para conectar los conceptos revisados con la experiencia cotidiana y su impacto social y cultural.</p>
+
+    <div class="quote-block">
+      <p><strong>Uso diario y rol como ciudadano digital.</strong> En mi día a día uso constantemente herramientas TIC: redes sociales para comunicarme, plataformas de estudio o trabajo virtual, aplicaciones de mensajería y servicios de compras o banca en línea. Esto me hace darme cuenta de que ya ejerzo, muchas veces sin pensarlo, mi rol como ciudadano digital: cuando decido qué información compartir, cuando verifico una noticia antes de reenviarla, o cuando reporto o bloqueo un contenido inapropiado.</p>
+      <p><strong>Riesgos y autocuidado.</strong> Comprendo que estoy expuesto a riesgos como la adicción a las pantallas, el ciberacoso o la difusión no consentida de contenido íntimo, por lo que mantengo hábitos de autocuidado: cuidar mi privacidad, limitar el tiempo de pantalla y pedir ayuda a un adulto de confianza o a las autoridades si identifico una situación de riesgo.</p>
+      <p><strong>Oportunidades aprovechadas.</strong> También aprovecho oportunidades reales de estas tecnologías, como acceder a información académica, participar en encuestas o iniciativas ciudadanas, y aprender nuevas habilidades de forma autónoma.</p>
+      <p>Ser un ciudadano digital consciente implica equilibrar estos riesgos y oportunidades, actuando siempre con responsabilidad, sentido crítico y respeto hacia los demás en los entornos digitales.</p>
+      <div class="signature">Juan Diego Castro Gómez · 127161</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  ACTIVIDAD MÓDULO 2 — APRENDIZAJE BASADO EN PROBLEMAS · CIUDADANÍA DIGITAL
+</footer>
+
+</body>
+</html>
